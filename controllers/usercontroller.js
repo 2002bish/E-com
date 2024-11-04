@@ -1,7 +1,8 @@
 const User = require('../models/userModel'); // Adjust the path as necessary
 const bcrypt = require('bcrypt');
-
+const asyncHandler= require("express-async-handler");
 // Register a new user
+
 exports.registerUser = async (req, res) => {
     const { firstname, lastname, email, mobile, password } = req.body;
 
