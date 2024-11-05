@@ -1,7 +1,7 @@
-const mongoose = require('mongoose'); // Erase if already required
+const mongoose = require('mongoose'); 
 
-// Declare the Schema of the Mongo model
-var userSchema = new mongoose.Schema({
+
+const userSchema = new mongoose.Schema({
     firstname:{
         type:String,
         required:true,
@@ -32,5 +32,4 @@ var userSchema = new mongoose.Schema({
     }
 });
 
-//Export the model
 module.exports = mongoose.model('User', userSchema);

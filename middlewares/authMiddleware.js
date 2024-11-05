@@ -1,5 +1,5 @@
 const User= require("../models/userModel");
-const jwt= require("jsonwebToken");
+const jwt= require("jsonwebtoken")
 const asyncHandler = require("express-async-handler");
 
 
@@ -8,7 +8,7 @@ const authMiddleware= asyncHandler (async(req, res,next) => {
     if (req?.headers?.authorization?.startsWith("Bearer")){
         token =res.headers.authorization.split("")[1];
         try{
-            if (toekn){
+            if (token){
                 const decoded= jwt.verify (token, process.env.JWT_SECRET);
                 console.log(decoded);
             }

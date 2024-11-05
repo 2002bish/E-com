@@ -1,9 +1,9 @@
-const User = require('../models/userModel'); // Adjust the path as necessary
+const User = require('../models/userModel'); 
 const bcrypt = require('bcrypt');
 const asyncHandler= require("express-async-handler");
-// Register a new user
 
-exports.registerUser = async (req, res) => {
+
+registerUser = async (req, res) => {
     const { firstname, lastname, email, mobile, password } = req.body;
 
     try {
@@ -36,7 +36,7 @@ exports.registerUser = async (req, res) => {
 };
 
 // Log in a user
-exports.loginUser = async (req, res) => {
+loginUser = async (req, res) => {
     const { email, password } = req.body;
 
     try {
@@ -64,8 +64,8 @@ exports.loginUser = async (req, res) => {
     }
 };
 
-// Get details of a specific user
-exports.getUserById = async (req, res) => {
+// To Get details of a specific user
+getUserById = async (req, res) => {
     const { id } = req.params;
 
     try {
@@ -79,8 +79,8 @@ exports.getUserById = async (req, res) => {
     }
 };
 
-// Update user details
-exports.updateUser = async (req, res) => {
+// To Update user details
+updateUser = async (req, res) => {
     const { id } = req.params;
     const { firstname, lastname, email, mobile } = req.body;
 
@@ -101,8 +101,8 @@ exports.updateUser = async (req, res) => {
     }
 };
 
-// Delete a user
-exports.deleteUser = async (req, res) => {
+//  To delete a user
+deleteUser = async (req, res) => {
     const { id } = req.params;
 
     try {
@@ -117,4 +117,7 @@ exports.deleteUser = async (req, res) => {
     }
 };
 
-
+module.exports (registerUser,
+    loginUser,
+    deleteUser,updateUser,
+    getUserById);
