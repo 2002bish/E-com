@@ -40,38 +40,27 @@ exports.loginUser = async (req, res) => {
     const { email, password } = req.body;
 
     try {
-        // Check if the user exists
+        // Find user by email
         const user = await User.findOne({ email });
         if (!user) {
-            return res.status(400).json({ message: 'Invalid email or password' });
+            return res.status(404).json({ message: "User not found" });
         }
 
-        // Verify the password
-        const isPasswordValid = await bcrypt.compare(password, user.password);
-        if (!isPasswordValid) {
-            return res.status(400).json({ message: 'Invalid email or password' });
+        // Check password
+        const isMatch = await bcrypt.compare(password, user.password);
+        if (!isMatch) {
+            return res.status(400).json({ message: "Invalid password" });
         }
 
-        // Create a token
-        const token = jwt.sign(
-            { id: user._id },
-            process.env.JWT_SECRET,
-            { expiresIn: '1h' }
-        );
-
-        // Respond with the token and user details
-        res.json({
-            token,
-            user: {
-                id: user._id,
-                firstname: user.firstname,
-                lastname: user.lastname,
-                email: user.email,
-                mobile: user.mobile,
-            },
+        
+        // Send success response
+        return res.status(200).json({
+            message: "Login successful",
+            
         });
     } catch (error) {
-        res.status(500).json({ message: 'Failed to log in', error });
+        console.error("Login Error:", error);
+        return res.status(500).json({ message: "Failed to log in", error: error.message || error });
     }
 };
 
