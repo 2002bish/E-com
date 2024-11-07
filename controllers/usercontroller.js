@@ -117,7 +117,7 @@ deleteUser = async (req, res) => {
     }
 };
 
-module.exports (registerUser,
+module.exports= {registerUser,
     loginUser,
     deleteUser,updateUser,
-    getUserById);
+    getUserById};
