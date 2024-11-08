@@ -3,13 +3,13 @@ const router = express.Router();
 const orderController = require('../controllers/ordercontroller');
 
 // Order routes
-router.post('/orders', orderController.createOrder); // Create order
-router.get('/orders', orderController.getAllOrders); // Get all orders
-router.get('/orders/:id', orderController.getOrderById); // Get order by ID
+router.post('/orders', orderController.createOrder); 
+router.get('/orders', orderController.getAllOrders); 
+router.get('/orders/:id', orderController.getOrderById); 
 
 // Order management
-router.put('/orders/:id/status', orderController.updateOrderStatus); // Update order status
-router.put('/orders/:id/assign', orderController.assignOrderToDeliveryPerson); // Assign to delivery person
-router.put('/orders/:id/refund', orderController.handleRefund); // Manage refunds
+router.put('/orders/:id/status', orderController.updateOrderStatus); 
+router.put('/orders/:id/assign', orderController.assignOrderToDeliveryPerson); 
+router.put('/orders/:id/refund', orderController.handleRefund); 
 
 module.exports = router;
