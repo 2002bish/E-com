@@ -8,7 +8,8 @@ const authRoutes = require("./routes/authRoutes");
 const { notFound, errorHandler } = require("./middlewares/errorHandler");
 const productRoute =require("./routes/productRoute");
 const orderRoute =require("./routes/orderRoute");
-// Connect to the database
+
+// Database Connection
 dbConnect();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
