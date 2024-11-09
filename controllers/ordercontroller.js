@@ -68,7 +68,7 @@ exports.assignOrderToDeliveryPerson = async (req, res) => {
   }
 };
 
-// Manage refunds and returns
+// Manage Refunds and Returns
 exports.handleRefund = async (req, res) => {
   try {
     const { refundStatus } = req.body;
