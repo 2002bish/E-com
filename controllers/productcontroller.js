@@ -86,7 +86,7 @@ exports.updateStock = async (req, res) => {
   }
 };
 
-// Batch import products
+//  import products
 exports.importProducts = async (req, res) => {
   try {
     const products = req.body.products; // Expecting an array of product objects
@@ -97,7 +97,7 @@ exports.importProducts = async (req, res) => {
   }
 };
 
-// Export products to CSV
+
 const { parse } = require('json2csv');
 exports.exportProducts = async (req, res) => {
   try {
