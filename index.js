@@ -1,5 +1,5 @@
 const express = require("express");
-const dbConnect = require("./config/dbConnect"); // Remove .default
+const dbConnect = require("./config/dbConnect"); 
 const dotenv = require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 4000;
