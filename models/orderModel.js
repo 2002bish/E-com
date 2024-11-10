@@ -12,7 +12,13 @@ const orderSchema= new mongoose.Schema({
     assignedTo: { type: mongoose.Schema.Types.ObjectId, ref: 'DeliveryPerson', default: null },
   refundStatus: { type: String, enum: ['none', 'requested', 'approved', 'rejected'], default: 'none' },
   createdAt: { type: Date, default: Date.now },
-  updatedAt: { type: Date, default: Date.now }
+  updatedAt: { type: Date, default: Date.now },
+
+
+  deliveryPerson: { type: mongoose.Schema.Types.ObjectId, ref: 'DeliveryPerson', default: null },
+  deliveryStatus: { type: String, enum: ['not_assigned', 'in_transit', 'delivered'], default: 'not_assigned' },
+  estimatedDeliveryTime: { type: Date },
+  deliveryCompletedAt: { type: Date },
 
 });
 // Middleware to update `updatedAt` before saving
