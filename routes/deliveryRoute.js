@@ -3,7 +3,7 @@ const router = 'express.Router';
 const deliverycontroller =require ("../controllers/deliverycontroller");
 
 //Assign Delivery Task
-route.put('/delivery/assign', deliverycontroller.assignDelivery);
+router.put('/delivery/assign', deliverycontroller.assignDelivery);
 
 //For real time location tracking
 router.put('/delivery/location', deliverycontroller.updateDeliveryLocation);
