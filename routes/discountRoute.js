@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const discountCodeController = require('../controllers/discountCodeController');
+const discountCodeController = require('../controllers/discountcontroller');
 
 // Discount code CRUD
 router.post('/discount-codes', discountCodeController.createDiscountCode);
