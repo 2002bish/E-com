@@ -9,6 +9,8 @@ const { notFound, errorHandler } = require("./middlewares/errorHandler");
 const productRoute =require("./routes/productRoute");
 const orderRoute =require("./routes/orderRoute");
 const deliveryRoute= require("./routes/deliveryRoute");
+const discountRoute = require("./routes/discountRoute");
+const promotionRoute = require ("./routes/promtionRoute");
 
 // Database Connection
 dbConnect();
@@ -19,6 +21,8 @@ app.use("/api/user", authRoutes);
 app.use("/api/product", productRoute);
 app.use("/api/order", orderRoute);
 app.use("/api/delivery", deliveryRoute);
+app.use("/api/discount/discount", discountRoute);
+
 
 
 app.use(notFound);
