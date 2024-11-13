@@ -22,7 +22,7 @@ app.use("/api/product", productRoute);
 app.use("/api/order", orderRoute);
 app.use("/api/delivery", deliveryRoute);
 app.use("/api/discount/discount", discountRoute);
-
+app.use("/api/promotionRoute", promotionRoute);
 
 
 app.use(notFound);
