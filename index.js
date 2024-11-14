@@ -11,6 +11,9 @@ const orderRoute =require("./routes/orderRoute");
 const deliveryRoute= require("./routes/deliveryRoute");
 const discountRoute = require("./routes/discountRoute");
 const promotionRoute = require ("./routes/promtionRoute");
+const ticketRoute = require("./routes/ticketRoute");
+const refundRoute = require("./routes/refundRoute");
+
 
 // Database Connection
 dbConnect();
@@ -23,7 +26,8 @@ app.use("/api/order", orderRoute);
 app.use("/api/delivery", deliveryRoute);
 app.use("/api/discount/discount", discountRoute);
 app.use("/api/promotionRoute", promotionRoute);
-
+app.use("/api/ticketRoute", ticketRoute);
+app.use("/api/refundRoute", refundRoute);
 
 app.use(notFound);
 app.use(errorHandler);
