@@ -13,7 +13,7 @@ const discountRoute = require("./routes/discountRoute");
 const promotionRoute = require ("./routes/promtionRoute");
 const ticketRoute = require("./routes/ticketRoute");
 const refundRoute = require("./routes/refundRoute");
-
+const reportRoute = require("./routes/reportRoute");
 
 // Database Connection
 dbConnect();
@@ -28,6 +28,7 @@ app.use("/api/discount/discount", discountRoute);
 app.use("/api/promotionRoute", promotionRoute);
 app.use("/api/ticketRoute", ticketRoute);
 app.use("/api/refundRoute", refundRoute);
+app.use("/api/reportRoute", reportRoute);
 
 app.use(notFound);
 app.use(errorHandler);
