@@ -1,5 +1,5 @@
 const express = require ('express');
-const router = 'express.Router';
+const router = express.Router();
 const deliverycontroller =require ("../controllers/deliverycontroller");
 
 //Assign Delivery Task
