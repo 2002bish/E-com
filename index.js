@@ -15,6 +15,8 @@ const ticketRoute = require("./routes/ticketRoute");
 const refundRoute = require("./routes/refundRoute");
 const reportRoute = require("./routes/reportRoute");
 const notificationRoute = require("./routes/notificationRoute");
+const settingRoute = require('./routes/settingRoute');
+
 // Database Connection
 dbConnect();
 app.use(bodyParser.json());
@@ -25,11 +27,15 @@ app.use("/api/product", productRoute);
 app.use("/api/order", orderRoute);
 app.use("/api/delivery", deliveryRoute);
 app.use("/api/discount/discount", discountRoute);
-app.use("/api/promotionRoute", promotionRoute);
-app.use("/api/ticketRoute", ticketRoute);
-app.use("/api/refundRoute", refundRoute);
-app.use("/api/reportRoute", reportRoute);
-app.use("/api/notificationRoute", notificationRoute);
+app.use("/api/promotion", promotionRoute);
+app.use("/api/ticket", ticketRoute);
+app.use("/api/refund", refundRoute);
+app.use("/api/report", reportRoute);
+app.use("/api/notification", notificationRoute);
+app.use("/api/setting", settingRoute);
+
+
+
 app.use(notFound);
 app.use(errorHandler);
 
