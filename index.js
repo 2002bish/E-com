@@ -15,7 +15,7 @@ const ticketRoute = require("../routes/ticketRoute");
 const refundRoute = require("../routes/refundRoute");
 const reportRoute = require("../routes/reportRoute");
 const notificationRoute = require("../routes/notificationRoute");
-const settingRoute = require('../routes/settingRoute');
+const settingRoute = require("../routes/settingRoute");
 
 // Database Connection
 dbConnect();
