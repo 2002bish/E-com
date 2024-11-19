@@ -10,7 +10,7 @@ const operationalSettingsSchema = new mongoose.Schema({
 
 // Payment Settings Schema
 const paymentSettingsSchema = new mongoose.Schema({
-  enabledGateways: { type: [String], default: ['Stripe', 'PayPal'] },
+  enabledGateways: { type: [String], default: ['IME Pay', 'Khalti'] },
   currency: { type: String, default: 'NPR' },
   otherSettings: { type: Map, of: String },
 });
