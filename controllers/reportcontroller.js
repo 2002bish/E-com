@@ -86,6 +86,7 @@ exports.getDeliveryPerformanceReport = async (req, res) => {
       }
     ]);
 
+    
     res.status(200).json({ message: 'Delivery performance report generated', data: deliveryPerformance });
   } catch (error) {
     res.status(400).json({ error: 'Error generating delivery performance report', details: error });
