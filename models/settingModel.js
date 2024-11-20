@@ -26,7 +26,7 @@ const OperationalSettings = mongoose.model('OperationalSettings', operationalSet
 const PaymentSettings = mongoose.model('PaymentSettings', paymentSettingsSchema);
 const TaxSettings = mongoose.model('TaxSettings', taxSettingsSchema);
 
-module.exports = {
+module.exports ={
   OperationalSettings,
   PaymentSettings,
   TaxSettings
