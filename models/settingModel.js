@@ -17,7 +17,7 @@ const paymentSettingsSchema = new mongoose.Schema({
 
 // Tax and Compliance Settings Schema
 const taxSettingsSchema = new mongoose.Schema({
-  taxRates: { type: Map, of: Number }, // Keyed by region or category, e.g., {'NY': 0.08}
+  taxRates: { type: Map, of: Number }, 
   complianceDocuments: { type: [String], default: [] },
   otherSettings: { type: Map, of: String },
 });
