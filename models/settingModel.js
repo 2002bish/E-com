@@ -1,4 +1,4 @@
-
+//payment setting
 const mongoose = require('mongoose');
 
 // Operational Settings Schema
