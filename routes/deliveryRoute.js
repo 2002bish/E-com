@@ -16,4 +16,5 @@ router.put('/delivery/complete', deliverycontroller.completeDelivery);
 //History of the Delivery
 router.get('/delivery/history/:deliveryPersonId', deliverycontroller.getDeliveryHistory)
 
+
 module.exports =router;
