@@ -24,7 +24,7 @@ exports.getSalesReport = async (req, res) => {
   }
 };
 
-// Inventory report for fast-moving and slow-moving products
+// Inventory report for fast outgoing product and slow outgoing products
 exports.getInventoryReport = async (req, res) => {
   try {
     const inventoryData = await Inventory.aggregate([
@@ -41,7 +41,7 @@ exports.getInventoryReport = async (req, res) => {
           salesCount: { $size: "$salesData" }
         }
       },
-      { $sort: { salesCount: -1 } }  // Highest sales count first
+      { $sort: { salesCount: -1 } }  
     ]);
 
     res.status(200).json({ message: 'Inventory report generated', data: inventoryData });
@@ -62,7 +62,7 @@ exports.getCustomerMetrics = async (req, res) => {
           averageOrderValue: { $avg: "$totalAmount" }
         }
       },
-      { $sort: { totalOrders: -1 } }  // Frequent shoppers first
+      { $sort: { totalOrders: -1 } }  
     ]);
 
     res.status(200).json({ message: 'Customer metrics generated', data: customerMetrics });
