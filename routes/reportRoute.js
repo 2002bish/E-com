@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const reportsController = require('../controllers/reportcontroller');
+const {authMiddleware}= require ("../middlewares/authMiddleware")
 
 // Sales Reports
 router.get("/salesreport", reportsController.getSalesReport);

@@ -2,6 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const ticketController = require('../controllers/ticketcontroller');
+const {authMiddleware}= require ("../middlewares/authMiddleware")
 
 // Ticket CRUD and messaging
 router.post("/create-tickets", ticketController.createTicket);

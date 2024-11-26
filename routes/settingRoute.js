@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const settingsController = require('../controllers/settingcontroller');
+const {authMiddleware}= require ("../middlewares/authMiddleware")
 
 // Operational Settings
 router.get("/settingoperational", settingsController.getOperationalSettings);
