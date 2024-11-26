@@ -21,14 +21,14 @@ router.post("/register", registerUser);
 router.post("/login", loginUser);
 
 // Route for getting a user by ID
-router.get("/:id", getUserById);
+router.get("/getuser", getUserById);
 
 // Route for updating a user by ID
-router.put("/:id", updateUser);
+router.put("/update", updateUser);
 
 // Route for deleting a user by ID
-router.delete("/:id", deleteUser);
+router.delete("/delete", deleteUser);
 
-router.get("/:id", authMiddleware);
+router.get("/id", authMiddleware);
 
 module.exports = router;
