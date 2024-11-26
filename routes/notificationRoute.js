@@ -1,17 +1,18 @@
 const express = require('express');
 const router = express.Router();
 const notificationController = require('../controllers/notificationcontroller');
+const {authMiddleware}= require ("../middlewares/authMiddleware")
 
 // Order Notification
-router.post('/notifications/order', notificationController.sendOrderNotification);
+router.post("/Ordernotification", notificationController.sendOrderNotification);
 
 // Inventory Alert
-router.post('/notifications/inventory', notificationController.sendInventoryAlert);
+router.post("/inventory", notificationController.sendInventoryAlert);
 
 // Customer Notification
-router.post('/notifications/customer', notificationController.sendCustomerNotification);
+router.post("/customer", notificationController.sendCustomerNotification);
 
 // Mark Notification as Read
-router.patch('/notifications/:notificationId/read', notificationController.markAsRead);
+router.patch("/markasread", notificationController.markAsRead);
 
 module.exports = router;

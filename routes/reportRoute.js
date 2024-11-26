@@ -3,15 +3,15 @@ const router = express.Router();
 const reportsController = require('../controllers/reportcontroller');
 
 // Sales Reports
-router.get('/reports/sales', reportsController.getSalesReport);
+router.get("/salesreport", reportsController.getSalesReport);
 
 // Inventory Reports
-router.get('/reports/inventory', reportsController.getInventoryReport);
+router.get("/reportinventory", reportsController.getInventoryReport);
 
 // Customer Metrics
-router.get('/reports/customer-metrics', reportsController.getCustomerMetrics);
+router.get("/reportscustomer-metrics", reportsController.getCustomerMetrics);
 
 // Delivery Performance
-router.get('/reports/delivery-performance', reportsController.getDeliveryPerformanceReport);
+router.get("/reportsdelivery-performance", reportsController.getDeliveryPerformanceReport);
 
 module.exports = router;

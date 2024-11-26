@@ -3,15 +3,15 @@ const router = express.Router();
 const settingsController = require('../controllers/settingcontroller');
 
 // Operational Settings
-router.get('/settings/operational', settingsController.getOperationalSettings);
-router.put('/settings/operational', settingsController.updateOperationalSettings);
+router.get("/settingoperational", settingsController.getOperationalSettings);
+router.put("/update-setting-operational", settingsController.updateOperationalSettings);
 
 // Payment Settings
-router.get('/settings/payment', settingsController.getPaymentSettings);
-router.put('/settings/payment', settingsController.updatePaymentSettings);
+router.get("/settingpayment", settingsController.getPaymentSettings);
+router.put("/update-setting-payment", settingsController.updatePaymentSettings);
 
 // Tax Settings
-router.get('/settings/tax', settingsController.getTaxSettings);
-router.put('/settings/tax', settingsController.updateTaxSettings);
+router.get("/setting-tax", settingsController.getTaxSettings);
+router.put("/update-setting-tax", settingsController.updateTaxSettings);
 
 module.exports = router;
