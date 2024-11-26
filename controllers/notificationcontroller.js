@@ -21,7 +21,7 @@ exports.sendOrderNotification = async (req, res) => {
 // Send a low inventory alert
 exports.sendInventoryAlert = async (req, res) => {
   try {
-    const lowStockProducts = await Inventory.find({ stockLevel: { $lt: 5 }, lowStockAlert: false });
+    const lowStockProducts = await Inventory.find({ stockLevel: { $lt: 5}, lowStockAlert: false });
 
     for (const product of lowStockProducts) {
       await Notification.create({
