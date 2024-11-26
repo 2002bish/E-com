@@ -15,6 +15,6 @@ router.put("/updateproductstock", productController.updateStock);
 
 
 router.post("/productimport", productController.importProducts); // Import products
-router.get("/productsexport", productController.exportProducts); // Export products to CSV
+router.get("/productexport", productController.exportProducts); // Export products to CSV
 
 module.exports = router;
