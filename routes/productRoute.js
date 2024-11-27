@@ -6,15 +6,15 @@ const {authMiddleware}= require ("../middlewares/authMiddleware")
 
 router.post("/create", productController.createProduct); 
 router.get("/get", productController.getProducts); 
-router.get("/productid", productController.getProductById); 
-router.put("/updateproductid", productController.updateProduct); 
-router.delete("/deleteproductid", productController.deleteProduct); 
+router.get("/:id", productController.getProductById); 
+router.put("/:id", productController.updateProduct); 
+router.delete("/:id", productController.deleteProduct); 
 
 
-router.put("/updateproductstock", productController.updateStock); 
+router.put("/:id/stock", productController.updateStock); 
 
 
-router.post("/productimport", productController.importProducts); // Import products
-router.get("/productexport", productController.exportProducts); // Export products to CSV
+router.post("/import", productController.importProducts); // Import products
+router.get("/export", productController.exportProducts); // Export products to CSV
 
 module.exports = router;

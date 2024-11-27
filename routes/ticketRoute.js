@@ -5,10 +5,10 @@ const ticketController = require('../controllers/ticketcontroller');
 const {authMiddleware}= require ("../middlewares/authMiddleware")
 
 // Ticket CRUD and messaging
-router.post("/create-tickets", ticketController.createTicket);
-router.get("/get-tickets", ticketController.getAllTickets);
-router.post("/ticket-message", ticketController.addMessageToTicket);
-router.patch("/update-ticket-status", ticketController.updateTicketStatus);
-router.get("/get-orderId", ticketController.getOrderDetails);
+router.post("/create", ticketController.createTicket);
+router.get("/get", ticketController.getAllTickets);
+router.post("/:ticketId/message", ticketController.addMessageToTicket);
+router.patch("/:ticketId/status", ticketController.updateTicketStatus);
+router.get("/order/:orderId", ticketController.getOrderDetails);
 
 module.exports = router;

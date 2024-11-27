@@ -4,12 +4,12 @@ const promotionController = require('../controllers/promotioncontroller');
 const {authMiddleware}= require ("../middlewares/authMiddleware")
 
 // Promotion CRUD
-router.post("/createpromotion", promotionController.createPromotion);
-router.get("/getpromotion", promotionController.getPromotions);
-router.put("/updatepromotion", promotionController.updatePromotion);
-router.delete("/deletepromotion", promotionController.deletePromotion);
+router.post("/create", promotionController.createPromotion);
+router.get("/get", promotionController.getPromotions);
+router.put("/:promotionID", promotionController.updatePromotion);
+router.delete("/:promotionID", promotionController.deletePromotion);
 
 // Sales impact tracking
-router.get("/promotionimpact", promotionController.getPromotionImpact);
+router.get("/impact", promotionController.getPromotionImpact);
 
 module.exports = router;

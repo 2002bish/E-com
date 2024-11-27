@@ -4,15 +4,15 @@ const settingsController = require('../controllers/settingcontroller');
 const {authMiddleware}= require ("../middlewares/authMiddleware")
 
 // Operational Settings
-router.get("/settingoperational", settingsController.getOperationalSettings);
-router.put("/update-setting-operational", settingsController.updateOperationalSettings);
+router.get("/operational", settingsController.getOperationalSettings);
+router.put("/operational", settingsController.updateOperationalSettings);
 
 // Payment Settings
-router.get("/settingpayment", settingsController.getPaymentSettings);
-router.put("/update-setting-payment", settingsController.updatePaymentSettings);
+router.get("/payment", settingsController.getPaymentSettings);
+router.put("/payment", settingsController.updatePaymentSettings);
 
 // Tax Settings
-router.get("/setting-tax", settingsController.getTaxSettings);
-router.put("/update-setting-tax", settingsController.updateTaxSettings);
+router.get("/tax", settingsController.getTaxSettings);
+router.put("/tax", settingsController.updateTaxSettings);
 
 module.exports = router;

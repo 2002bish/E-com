@@ -4,7 +4,7 @@ const notificationController = require('../controllers/notificationcontroller');
 const {authMiddleware}= require ("../middlewares/authMiddleware")
 
 // Order Notification
-router.post("/Ordernotification", notificationController.sendOrderNotification);
+router.post("/order", notificationController.sendOrderNotification);
 
 // Inventory Alert
 router.post("/inventory", notificationController.sendInventoryAlert);
@@ -13,6 +13,6 @@ router.post("/inventory", notificationController.sendInventoryAlert);
 router.post("/customer", notificationController.sendCustomerNotification);
 
 // Mark Notification as Read
-router.patch("/markasread", notificationController.markAsRead);
+router.patch("/:notificationId/read", notificationController.markAsRead);
 
 module.exports = router;

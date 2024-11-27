@@ -21,13 +21,13 @@ router.post("/register", registerUser);
 router.post("/login", loginUser);
 
 // Route for getting a user by ID
-router.get("/getuser", getUserById);
+router.get("/:id", getUserById);
 
 // Route for updating a user by ID
-router.put("/update", updateUser);
+router.put("/:id", updateUser);
 
 // Route for deleting a user by ID
-router.delete("/delete", deleteUser);
+router.delete("/:id", deleteUser);
 
 router.get("/id", authMiddleware);
 
