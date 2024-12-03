@@ -9,8 +9,6 @@ router.put("/assign", deliverycontroller.assignDelivery);
 //For real time location tracking
 router.put("/location", deliverycontroller.updateDeliveryLocation);
 
-
-
 //If Delivery is completed
 router.put("/complete", deliverycontroller.completeDelivery);
 
