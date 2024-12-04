@@ -15,6 +15,7 @@ const orderSchema= new mongoose.Schema({
   updatedAt: { type: Date, default: Date.now },
 
 
+  
   deliveryPerson: { type: mongoose.Schema.Types.ObjectId, ref: 'DeliveryPerson', default: null },
   deliveryStatus: { type: String, enum: ['not_assigned', 'in_transit', 'delivered'], default: 'not_assigned' },
   estimatedDeliveryTime: { type: Date },
