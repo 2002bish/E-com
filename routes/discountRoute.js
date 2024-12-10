@@ -9,4 +9,5 @@ router.get("/get", discountCodeController.getDiscountCodes);
 router.put("/:discoundCodeId", discountCodeController.updateDiscountCode);
 router.delete("/:discountCodeId", discountCodeController.deleteDiscountCode);
 
+
 module.exports = router;
